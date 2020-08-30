@@ -1,10 +1,18 @@
 import React from 'react';
 import './App.css';
+import Header from './Header.js';
 
 function App() {
   return (
     <div className="app">
-      <h1>Let's build a facebook clone</h1>
+      {/* Header */}
+      <Header />
+
+      {/* App body */}
+
+        {/* Sidebar */}
+        {/* Feed */}
+        {/* Widgets */}
     </div>
   );
 }
