@@ -8,13 +8,17 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import { useStateValue } from './StateProvider';
+
 
 function Sidebar() {
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="sidebar">
       <SidebarRow 
-        src='https://instagram.fphx1-1.fna.fbcdn.net/v/t51.2885-19/s320x320/13414136_1719913881597049_846826088_a.jpg?_nc_ht=instagram.fphx1-1.fna.fbcdn.net&_nc_ohc=SQkC3a07NUIAX_9STDO&oh=740b970b5adc0c6e6b4e48a29ced0771&oe=5F792CB0' 
-        title='Mike Torres' />
+        src={user.photoURL} 
+        title={user.displayName} />
       <SidebarRow 
         Icon={LocalHospitalIcon}
         title="Covid-19 Information Center"
